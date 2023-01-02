@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap");
 
 body {
-    font-family: 'Cabin';
+    font-family: "Cabin";
     background-color: #758190;
+    background-image: url("assets/sea octopus.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #tentacles {
@@ -17,10 +21,62 @@ body {
     margin-left: -10px;
     margin-right: -10px;
     margin-top: -10px;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    float: right;
+}
+
+.menu li {
+    float: right;
+}
+
+.header li a {
+    display: flex;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.header li a:hover {
+    background-color: rgb(104, 205, 185);
+}
+
+.menu-btn {
+    display: none;
+    float: right;
+    font-size: 50px;
+    padding: 0.5%;
+    background: no-repeat;
+}
+
+.menu-btn i {
+    color: black;
+    font-size: 100px;
+    cursor: pointer;
+}
+
+.name-logo {
+    display: flex;
+    float: left;
+    vertical-align: middle;
+    align-items: center;
 }
 
 .stats-container {
     display: flex;
+    align-items: center;
 }
 
 .stats-card {
@@ -30,9 +86,13 @@ body {
     margin: 1%;
     width: 100%;
     text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px lightblue;
 }
 
-#num-contributions, #total-raised, #num-games {
+#num-contributions,
+#total-raised,
+#num-games {
     font-size: 50px;
 }
 
@@ -45,11 +105,11 @@ body {
 .game-img {
     width: 100%;
     border-radius: 5px;
-    box-shadow: 0 0 10px #FFFFFF;
+    box-shadow: 0 0 10px #ffffff;
 }
 
 .game-card {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 1%;
     margin: 1%;
     width: 300px;
@@ -67,9 +127,44 @@ body {
 }
 
 button {
-    font-family: 'Cabin';
+    font-family: "Cabin";
     border: none;
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: center;
+    padding: 0.2em;
+}
+
+.pledge-button,
+.play-button {
+    border: 20px solid white;
+    /* Green border */
+    padding: 0.5em;
+    border-radius: 1.8em;
+    background-color: #c5ccd8;
+    color: #0d2828;
+    cursor: pointer;
+}
+
+/* Media */
+
+@media screen and (max-width: 600px) {
+    .menu-btn {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header ul {
+        display: none;
+    }
+
+    .header ul.show {
+        display: block;
+    }
 }
